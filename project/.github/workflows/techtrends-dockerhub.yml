@@ -1,0 +1,16 @@
+name: TechTrends - Package with Docker
+run-name: ${{ github.actor }} is learning GitHub Actions
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build the Docker image
+        run: docker build . --file ../Dockerfile --tag my-image-name:$(date +%s)

@@ -1,11 +1,29 @@
 ## Docker commands used to build the application 
-# TODO: insert the docker build command
+docker build -t techtrends .
 
 ## Docker commands used to run the application
-# TODO: insert the docker run command
+docker run -d -p 7111:3111 techtrends
 
 ## Docker commands used to get the application logs
-# TODO: insert the docker logs command
+docker logs 1d36a3c7c81dde38907f2ceef09d8cfb598e79f8f5e19f6639ce658f91e474c5
 
 ## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
+└─(21:04:47 on main ✹ ✭)──> docker logs 1d36a3c7c81dde38907f2ceef09d8cfb598e79f8f5e19f6639ce658f91e474c5
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:172.17.0.1 - - [03/Nov/2022 16:59:37] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [03/Nov/2022 16:59:37] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [03/Nov/2022 16:59:38] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:app:Article "2020 CNCF Annual Report" retrieved!
+INFO:werkzeug:172.17.0.1 - - [03/Nov/2022 16:59:39] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [03/Nov/2022 16:59:39] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:172.17.0.1 - - [03/Nov/2022 16:59:47] "GET /healthz HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [03/Nov/2022 16:59:52] "GET /metrics HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [03/Nov/2022 17:00:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [03/Nov/2022 17:00:14] "GET /static/css/main.css HTTP/1.1" 304 -
