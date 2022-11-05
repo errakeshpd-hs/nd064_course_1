@@ -1,6 +1,7 @@
 FROM python:3.8
 
-COPY ./techtrends ./
+COPY project/techtrends /techtrends
+WORKDIR /techtrends
 
 RUN pip install -r requirements.txt
 
